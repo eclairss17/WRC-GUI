@@ -1,0 +1,32 @@
+<mat-card>
+  <mat-card-header> Business Network </mat-card-header>
+</mat-card>
+<mat-card>
+  <mat-card-title>Converting Ether into tokens</mat-card-title>
+  <mat-card-content>
+    <mat-form-field id="address-selector" class="address-field">
+      <input type="number" matInput id="receiver" placeholder="Value to Issue WRC" (change)="setissuewrcvalue($event)">
+    </mat-form-field>
+    <button mat-button id="send" (click)="issueWrcfromEther()">Mint</button> 
+  </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-title>Withdraw tokens into Ether</mat-card-title>
+  <mat-card-content>
+    <mat-form-field id="address-selector" class="address-field">
+      <input type="number" matInput id="receiver" placeholder="Number of Tokens to Withdraw " (change)="withdrawvalue($event)">
+    </mat-form-field>
+    <button mat-button id="send" (click)="withdrawtoEther()">Withdraw</button> 
+  </mat-card-content>
+</mat-card>
+<mat-card>
+<mat-card-title>Transfer tokens</mat-card-title>
+<mat-card-content>
+  <mat-form-field id="address-selector" class="address-field">
+    <input type="number" matInput id="receiver" placeholder="Transfer amount to receiver " (change)="setAmount($event)">
+    <input type="number" matInput id="receiver" placeholder="Value to transfer" (change)=" setReceiver($event)">
+  </mat-form-field>
+  <button mat-button id="send" (click)="sendCoin()">Transfer money</button> 
+</mat-card-content>
+</mat-card>
+  
